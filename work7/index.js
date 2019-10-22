@@ -4,7 +4,7 @@ function sort(method){
     let logs
     console.log(method)
     //根据传入排序的方法调用不同的拍排序函数
-    if(method=='bebble'){
+    if(method=='bubble'){
         //调用bubbleSort()冒泡排序函数获取排序结果，
         logs = bubbleSort(origin)
     }else if(method=='insert'){
