@@ -21,4 +21,5 @@ function goldbach() {     var value = document.getElementById('odd').value
        }    
    }   
  }    
-  goldbach.innerHTML = str }
+  goldbach.innerHTML = str 
+}

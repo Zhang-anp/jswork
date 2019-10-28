@@ -74,28 +74,61 @@ let classes = [
     ]
 ]
 
-function createOption(obj, data){
-    for ( var i in data){
-        var op = new Option(data[i], i)
+// function createOption(obj, data){
+//     for ( var i in data){
+//         var op = new Option(data[i], i)
+//         obj.options.add(op)
+//     }
+// }
+// var collegeSelect = document.getElementById('collegeSelect')
+// createOption(collegeSelect,colleges)
+
+// var majorSelect = document.getElementById('majorSelect')
+// collegeSelect.onchange = function(){
+//     majorSelect.options.length = 0
+//     createOption(majorSelect,majors[collegeSelect.value])
+// }
+
+// var classSelect = document.getElementById('classSelect')
+// majorSelect.onchange = function(){
+//     classSelect.options.length = 0
+//     createOption(classSelect,classes[collegeSelect.value][majorSelect.value])
+// }
+// if(collegeSelect.value >=0) {
+//     classSelect.onchange()
+// }else{
+//     majorSelect.options.length = 0
+// }
+
+function createOption(obj,data) {
+    for (var i in data){
+        var op =new Option(data[i],i)
         obj.options.add(op)
     }
 }
-var collegeSelect = document.getElementById('collegeSelect')
+
+var collegeSelect =document.getElementById('collegeSelect')
 createOption(collegeSelect,colleges)
 
-var majorSelect = document.getElementById('majorSelect')
-collegeSelect.onchange = function(){
-    majorSelect.options.length = 0
+var majorSelect =document.getElementById('majorSelect')
+collegeSelect.onchange =function () {
+    majorSelect.options.length =0
     createOption(majorSelect,majors[collegeSelect.value])
 }
 
-var classSelect = document.getElementById('classSelect')
-majorSelect.onchange = function(){
+var classSelect =document.getElementById('classSelect')
+majorSelect.onchange =function () {
     classSelect.options.length = 0
     createOption(classSelect,classes[collegeSelect.value][majorSelect.value])
 }
-if(collegeSelect.value >=0) {
-    classSelect.onchange()
-}else{
-    majorSelect.options.length = 0
+
+collegeSelect.onchange =function () {
+    majorSelect.options.length = 0  
+    createOption(majorSelect,majors[collegeSelect.value])
+    if(collegeSelect.value>=0){
+        majorSelect.onchange()
+    }else{
+        classSelect.options.length =0
+    }
 }
+
