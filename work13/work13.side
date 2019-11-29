@@ -24,7 +24,7 @@
       "id": "53d9c689-8db4-4868-9bd3-8498494cb485",
       "comment": "",
       "command": "click",
-      "target": "linkText=work13 表单生成器",
+      "target": "xpath=//a[contains(text(),'work13')]",
       "targets": [
         ["linkText=work13 表单生成器", "linkText"],
         ["css=a:nth-child(30)", "css:finder"],
@@ -164,7 +164,7 @@
       "id": "0ad60f80-8fec-4dac-91c3-7814dac6f138",
       "comment": "",
       "command": "click",
-      "target": "linkText=work13 表单生成器",
+      "target": "xpath=//a[contains(text(),'work13')]",
       "targets": [
         ["linkText=work13 表单生成器", "linkText"],
         ["css=a:nth-child(30)", "css:finder"],
