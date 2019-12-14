@@ -1,0 +1,10 @@
+#box{
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    line-height: 140px;
+    text-align: center;
+    background: rgb(255, 123, 215);
+    color: rgb(235, 232, 104);
+    border-radius: 60px;
+}
